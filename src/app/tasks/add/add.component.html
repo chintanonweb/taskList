@@ -1,0 +1,106 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <mat-card>
+                <h2 class="text-center">Add {{addTaskBtn === 'true'? 'Task': 'SubTask'}}</h2>
+                <mat-card-content>
+                    <form *ngIf="addTaskBtn === 'true'" [formGroup]=" addTaskFormGroup">
+                        <mat-form-field appearance="outline" class="full-width-field">
+                            <mat-label>Title</mat-label>
+                            <input matInput placeholder="Enter Title" formControlName="name">
+                            <mat-error
+                                *ngIf="addTaskFormGroup.controls['name'].invalid && addTaskFormGroup.controls['name'].touched">
+                                <div *ngIf="addTaskFormGroup.controls['name'].errors?.['required']">
+                                    Title is required!
+                                </div>
+                                <div *ngIf="addTaskFormGroup.controls['name'].errors?.['minlength']">
+                                    Title cannot be less than 3 characters!
+                                </div>
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width-field">
+                            <mat-label>Description</mat-label>
+                            <textarea matInput placeholder="Enter Description" formControlName="description"></textarea>
+                            <mat-error
+                                *ngIf="addTaskFormGroup.controls['description'].invalid && addTaskFormGroup.controls['description'].touched">
+                                <div *ngIf="addTaskFormGroup.controls['description'].errors?.['required']">
+                                    Description is required!
+                                </div>
+                                <div *ngIf="addTaskFormGroup.controls['description'].errors?.['minlength']">
+                                    Description cannot be less than 3 characters!
+                                </div>
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width-field">
+                            <mat-label>Description</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="date">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                            <mat-error
+                                *ngIf="addTaskFormGroup.controls['date'].invalid && addTaskFormGroup.controls['date'].touched">
+                                <div *ngIf="addTaskFormGroup.controls['date'].errors?.['required']">
+                                    Date is required!
+                                </div>
+                            </mat-error>
+                        </mat-form-field>
+                        <div class="d-flex justify-content-center">
+                            <button mat-raised-button color="primary" class=" mb-2" (click)="addTask()">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                    <form *ngIf="addTaskBtn === 'false'" [formGroup]="addSubTaskFormGroup">
+                        <mat-form-field appearance="outline" class="full-width-field">
+                            <mat-label>Title</mat-label>
+                            <input matInput placeholder="Enter Title" formControlName="name">
+                            <mat-error
+                            *ngIf="addSubTaskFormGroup.controls['name'].invalid && addSubTaskFormGroup.controls['name'].touched">
+                            <div *ngIf="addSubTaskFormGroup.controls['name'].errors?.['required']">
+                                Title is required!
+                            </div>
+                            <div *ngIf="addSubTaskFormGroup.controls['name'].errors?.['minlength']">
+                                Title cannot be less than 3 characters!
+                            </div>
+                        </mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width-field">
+                            <mat-label>Description</mat-label>
+                            <textarea matInput placeholder="Enter Description" formControlName="description"></textarea>
+                            <mat-error
+                                *ngIf="addSubTaskFormGroup.controls['description'].invalid && addSubTaskFormGroup.controls['description'].touched">
+                                <div *ngIf="addSubTaskFormGroup.controls['description'].errors?.['required']">
+                                    Description is required!
+                                </div>
+                                <div *ngIf="addSubTaskFormGroup.controls['description'].errors?.['minlength']">
+                                    Description cannot be less than 3 characters!
+                                </div>
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width-field">
+                            <mat-label>Description</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="date">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                            <mat-error
+                            *ngIf="addSubTaskFormGroup.controls['date'].invalid && addSubTaskFormGroup.controls['date'].touched">
+                            <div *ngIf="addSubTaskFormGroup.controls['date'].errors?.['required']">
+                                Date is required!
+                            </div>
+                        </mat-error>
+                        </mat-form-field>
+                        <div class="d-flex justify-content-center">
+                            <button mat-raised-button color="primary" class="mb-2" (click)="addSubTask()">
+                                Add SubTask
+                            </button>
+                        </div>
+                    </form>
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

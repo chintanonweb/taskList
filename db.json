@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tasks": [
+    {
+      "name": "Tempor culpa mollit",
+      "description": "Id soluta qui quae asdasdaasdasda",
+      "date": "2022-05-12T18:30:00.000Z",
+      "status": "inactive",
+      "subTasks": [],
+      "id": "30874708924384"
+    },
+    {
+      "id": "8893819310444",
+      "name": "Tempor culpa mollit",
+      "description": "asdasdasd",
+      "date": "2022-05-12T18:30:00.000Z",
+      "status": "inactive",
+      "subTasks": []
+    },
+    {
+      "id": "9137213779695",
+      "name": "Odit ea excepteur et",
+      "description": "Quidem enim excepteu",
+      "date": "2022-05-03T18:30:00.000Z",
+      "status": "complete",
+      "subTasks": [
+        {
+          "id": "7660224715523",
+          "name": "Explicabo Dolores p",
+          "description": "Et aut rerum tempora",
+          "date": "2022-05-18T18:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "name": "Molestias et aliquid",
+      "description": "Rem explicabo Et eaasdasdasd",
+      "date": "2022-05-19T18:30:00.000Z",
+      "status": "inactive",
+      "subTasks": [],
+      "id": "1928013718164"
+    },
+    {
+      "id": "3437347183979",
+      "name": "Omnis est aut ullam ",
+      "description": "Possimus quia earum",
+      "date": "2022-05-03T18:30:00.000Z",
+      "status": "inactive",
+      "subTasks": []
+    },
+    {
+      "id": "6268805291736",
+      "name": "Qui cillum ea vero d",
+      "description": "Magnam laboris nihil",
+      "date": "2022-05-01T18:30:00.000Z",
+      "status": "complete",
+      "subTasks": []
+    },
+    {
+      "name": "Consectetur omnis p",
+      "description": "Aliquid sint minima",
+      "date": "2022-05-05T18:30:00.000Z",
+      "status": "complete",
+      "subTasks": [],
+      "id": "1593997684794"
+    }
+  ]
+}
